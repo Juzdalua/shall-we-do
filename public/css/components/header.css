@@ -1,0 +1,45 @@
+ul, li{
+    list-style: none;
+}
+
+.nav-bar{
+    width: 100%;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding:20px 0;
+    font-size: 20px;
+}
+
+.nav-bar__home-heart{
+    font-size: 30px;    
+}
+
+.nav-bar__home-main-ul,
+.nav-bar__home-side-ul{
+    display: flex;    
+}
+
+@keyframes rotateHeart{
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+.nav-bar__home-heart{
+    animation: rotateHeart 2s infinite;
+}
+
+.nav-bar__default-li {
+    margin-left: 15px;
+}
+
+@media screen and (max-width:500px) {
+    /* 스크린 크기가 500px보다 작으면*/
+    .nav-bar{
+        font-size: 10px;
+    }
+}
