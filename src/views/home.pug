@@ -14,3 +14,7 @@ html(lang="ko")
             block content
         footer 
             include layouts/footer.pug
+        
+        if msg 
+            script.
+                alert(`#{msg}`)

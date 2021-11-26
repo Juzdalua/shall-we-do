@@ -4,17 +4,23 @@ nav.nav-bar
     div.nav-bar__home-main
         ul.nav-bar__home-main-ul
             li.nav-bar__default-li 
-                a(href="#") 메뉴1
+                a(href="#") 맛집
             li.nav-bar__default-li 
-                a(href="#") 메뉴2
+                a(href="#") 놀거리
             li.nav-bar__default-li 
-                a(href="#") 메뉴3
+                a(href="#") 데이트코스
+            li.nav-bar__default-li 
+                a(href="#") 지하철코스
     div.nav-bar__home-side   
         ul.nav-bar__home-side-ul   
             li.nav-bar__default-li 
-                a(href="#") 회원가입
-            li.nav-bar__default-li  
-                a(href="/login") 로그인 
+                a(href="/join") 회원가입
+            if !loggedIn
+                li.nav-bar__default-li  
+                    a(href="/login") 로그인 
+            else 
+                li.nav-bar__default-li  
+                    a(href="/logout") 로그아웃 
             li.nav-bar__default-li 
                 a(href="#").fas.fa-bars
             li.nav-bar__default-li 

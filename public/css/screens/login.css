@@ -1,12 +1,124 @@
+
 .login-box__wrap{      
     display: flex;
     justify-content: center;
     align-items: center;    
-    width: 100%;
+    width: 100%;           
 }
 .login-box__content{
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     height: 70vh;
-    width: 80%;
+    width: 40%;
     margin-top: 3%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: black; 
+}
+
+@media screen and (max-width:960px) {
+    /* 스크린 크기가 1500px보다 작으면*/
+    .login-box__content{
+        width: 90%;
+    }
+}
+
+.login-box__content-info{
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: bold;   
+    color: black; 
+}
+
+.login-box__content-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box__content-form input,
+.login-box__content-form button{     
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black; 
+    font-size: 20px;
+}
+
+.login-box__content-form input:active,
+.login-box__content-form button:active{
+    outline: black;
+}
+
+.login-box__content-form input{
+    padding: 20px 60px;
+    border-radius: 10px;   
+}
+
+.login-box__content-form button{
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.login-box__content-join{
+    color: black;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.login-box__content-social__face,
+.login-box__content-social__google,
+.login-box__content-social__git{
+    border: none;
+    font-size: 20px;
+    padding: 10px 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.login-box__content-social__face{
+    background-color: #0966DE;
+}
+.login-box__content-social__google{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.login-box__content-social__git{
+    background-color: #000000;
+}
+
+@media screen and (max-width:400px) {
+    /* 스크린 크기가 1500px보다 작으면*/
+    .login-box__content-form input,
+    .login-box__content-form button{
+        font-size: 15px;
+    }
+    .login-box__content-form input{
+        padding: 10px 30px;
+        border-radius: 5px;   
+    }
+    
+    .login-box__content-form button{
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 20px;
+    }
+    
+    .login-box__content-join{
+        color: black;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .login-box__content-social__face,
+    .login-box__content-social__google,
+    .login-box__content-social__git{
+        border: none;
+        font-size: 10px;
+        padding: 5px 20px;
+        margin: 5px;
+        border-radius: 2px;
+    }
 }

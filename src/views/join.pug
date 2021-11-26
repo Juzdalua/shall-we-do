@@ -3,7 +3,7 @@ extends home.pug
 block content 
     div.login-box__wrap        
         div.login-box__content
-            span.login-box__content-info 로그인
+            span.login-box__content-info 회원가입
             form(action="" method="POST").login-box__content-form
                 input(type="id" placeholder="계정이름" name="id")
                 input(type="password" placeholder="비밀번호" name="password")
@@ -15,5 +15,5 @@ block content
                     i.fab.fa-google
                 button.login-box__content-social__git
                     i.fab.fa-github
-            a(href="/join").login-box__content-join 계정 생성하기
+            a(href="/login").login-box__content-join 로그인
                 
