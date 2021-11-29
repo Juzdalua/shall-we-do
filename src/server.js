@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import rootRouter from "./routers/rootRouter";
+import tastyRouter from "./routers/tastyRouter";
 import { authenticateAccessToken } from "./middlewares";
 import cookieParser from "cookie-parser";
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(authenticateAccessToken);
 app.use("/", rootRouter);
+app.use("/tasty-road", tastyRouter);
 
 app.listen(PORT, () => {
     console.log(`✔️ Connect PORT: ${PORT}.`);    

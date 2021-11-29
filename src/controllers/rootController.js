@@ -32,7 +32,6 @@ export const postLogin = (req, res) => {
 
 export const getLogout = (req, res) => {
     res.clearCookie('accessToken');
-    console.log(res.cookie)
     return res.redirect("/");
 };
 

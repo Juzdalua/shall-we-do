@@ -1,0 +1,17 @@
+extends ../home.pug
+include ../mixins/tasty-mixin.pug
+
+block content 
+    div.tasty-wrap
+        div.tasty-wrap__title
+            span 맛집 둘러보기
+        div.tasty-wrap__content
+            each food in foods 
+                +food(food) 
+                +food(food)                
+                +food(food) 
+                +food(food) 
+                +food(food) 
+                +food(food) 
+            else 
+                span 작성된 글이 없습니다.
