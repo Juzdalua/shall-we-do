@@ -3,8 +3,9 @@ include ../mixins/tasty-mixin.pug
 
 block content 
     div.tasty-wrap
-        div.tasty-wrap__title
-            span 맛집 둘러보기
+        div.tasty-wrap__header
+            span.tasty-wrap__title 맛집 둘러보기
+            a(href="/tasty-road/write").tasty-wrap__write 글쓰기
         div.tasty-wrap__content
             each food in foods 
                 +food(food) 
@@ -12,6 +13,9 @@ block content
                 +food(food) 
                 +food(food) 
                 +food(food) 
-                +food(food) 
+                +food(food)                 
             else 
                 span 작성된 글이 없습니다.
+        div.tasty-more
+            button.tasty-more__btn 더보기    
+    script(src="/public/js/moreButton.js")
